@@ -11,7 +11,7 @@
       "name": "engineer",
       "source": "./plugins/engineer",
       "description": "エンジニア向け開発ワークフロー。設計→実装→テストの自動開発、第三者レビュー、worktree管理、品質チェック。",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "watanabe-e-kamakura"
       },

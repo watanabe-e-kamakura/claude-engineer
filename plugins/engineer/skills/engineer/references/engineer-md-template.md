@@ -5,6 +5,7 @@
 - **技術スタック**: {{TECH_STACK}}
 - **リポジトリ構成**: {{REPO_STRUCTURE}}
 - **作成日**: {{CREATED_DATE}}
+- **plugin_version**: {{PLUGIN_VERSION}}
 
 ## ディレクトリ構成
 
