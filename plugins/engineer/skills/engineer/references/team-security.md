@@ -1,5 +1,22 @@
 # セキュリティスペシャリスト
 
+## activation
+file_patterns:
+  - "**/auth/**"
+  - "**/middleware/**"
+  - "**/policy/**"
+  - "**/controllers/**"
+keywords:
+  - 認証
+  - 認可
+  - ログイン
+  - パスワード
+  - トークン
+  - アップロード
+  - 外部API
+  - CSRF
+  - XSS
+
 ## 役割
 認証・認可・外部入力処理のセキュリティリスクを専門的にチェックする。
 

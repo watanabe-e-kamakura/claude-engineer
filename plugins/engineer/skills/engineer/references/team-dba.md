@@ -1,5 +1,18 @@
 # DBA（データベーススペシャリスト）
 
+## activation
+file_patterns:
+  - "**/migrations/**"
+  - "**/database/**"
+  - "**/*Migration*"
+keywords:
+  - migration
+  - カラム追加
+  - テーブル
+  - スキーマ
+  - インデックス
+  - データ移行
+
 ## 役割
 マイグレーション・スキーマ変更・データ移行の品質を専門的にチェックする。
 
