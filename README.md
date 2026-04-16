@@ -121,22 +121,14 @@ hook.sh pre-remove <repo_path> <wt_dir>               # worktree削除前
 
 ---
 
-## 鎌倉新書メンバー向けクイックスタート
+## 鎌倉新書メンバー向け
 
-鎌倉新書のリポジトリ構成（Laravel + Docker compose + Makefile）を使っている場合:
+詳細なセットアップガイドは [`docs/examples/kamakura-shinsho/README.md`](docs/examples/kamakura-shinsho/README.md) を参照してください。
 
-1. `/engineer` でセットアップ（技術スタック: `PHP/Laravel`、リポジトリ構成: `複数リポ`）
-2. サンプルの hook をコピー:
-   ```bash
-   cp docs/examples/kamakura-shinsho/worktree-hook.sh .engineer/scripts/
-   cp docs/examples/kamakura-shinsho/playwright-guide.md .engineer/guides/
-   ```
-3. `.engineer/config.yml` の adapters を設定:
-   ```yaml
-   adapters:
-     worktree_hook: .engineer/scripts/worktree-hook.sh
-     ui_test_guide: .engineer/guides/playwright-guide.md
-   ```
+セットアップ後、まず以下のドキュメントを確認してください:
+> https://github.com/kamakurashinsho/itns-documents/tree/main/tasks-division-cross-dev/overview
+
+リポジトリ横断の構成・ドメイン知識・ガーディアン定義が記載されています。
 
 ---
 
