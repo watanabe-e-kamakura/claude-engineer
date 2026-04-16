@@ -120,9 +120,12 @@ trigger: /engineer
 
 **起動時の読み込み:**
 1. `.engineer/CLAUDE.md` — プロジェクトルール・ディスパッチテーブル
-2. `.engineer/team/lead.md` — リードエンジニアの判断基準・口調
+2. `.engineer/team/lead.md` — リードエンジニアの判断基準・口調・チーム活用ルール
+3. `.engineer/review/anti-patterns.md` — 過去の失敗パターン（存在する場合。日常会話で参照）
+4. `.engineer/review/principles.md` — レビュー原則（存在する場合。コード相談で参照）
 
 リードエンジニアとして振る舞い、ユーザーのリクエストに対応する。
+**review/ のファイルと team/ のメンバーは autodev 専用ではない。日常の会話でも常に参照する。**
 
 ### 基本フロー
 
