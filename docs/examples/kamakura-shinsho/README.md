@@ -31,6 +31,47 @@ Claude Code 内で:
 - **技術スタック**: `PHP/Laravel`
 - **リポジトリ構成**: `複数リポ（GitHub org: kamakurashinsho）`
 
+## セットアップ後のディレクトリ構成
+
+実際にセットアップすると、こんな感じの `.engineer/` が生成されます。
+
+```
+.engineer/
+├── CLAUDE.md                              ← プロジェクトルール
+├── config.yml                             ← 技術スタック・リポジトリ設定
+├── design/                                ← 設計ドキュメント（autodev で自動生成）
+├── review/
+│   ├── principles.md                      ← レビュー原則（カスタマイズ可）
+│   └── patterns.md                        ← アプローチパターン（カスタマイズ可）
+├── team/
+│   ├── lead.md                            ← リードエンジニア（窓口）
+│   ├── guardian.md                        ← ガーディアン（自分の分身）
+│   └── [メンバー名].md                     ← 同僚の分身（Slack・PRから生成）
+├── tasks/
+│   └── projects/
+│       ├── business/                      ← 事業部別 Issue 管理
+│       │   ├── e-sogi.md
+│       │   ├── e-ohaka.md
+│       │   ├── e-butsudan.md
+│       │   ├── e-nursing.md
+│       │   ├── i-sozoku.md
+│       │   └── i-fudosan.md
+│       ├── library/                       ← 共有ライブラリ
+│       │   ├── itns-admin.md
+│       │   ├── itns-library.md
+│       │   └── itns-partner.md
+│       ├── common/                        ← 共通リポ
+│       └── support/                       ← 周辺ツール
+├── slack/
+│   ├── channels.md                        ← チャンネル設定
+│   └── active-threads.md                  ← Slack 受信箱
+└── logs/
+    └── daily/
+        └── 2026-04-16.md                  ← 日次ログ
+```
+
+特に `team/` が重要で、ここに同僚の分身を追加するほど autodev のレビュー精度が上がります。分身は Slack MCP や `gh` CLI で直近1年分のデータを食わせて生成します。
+
 ## セットアップ後に必ず読むドキュメント
 
 `.engineer/` が生成されたら、**まず以下のドキュメントを確認してください。**
