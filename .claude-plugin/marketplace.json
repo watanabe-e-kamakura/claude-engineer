@@ -1,0 +1,24 @@
+{
+  "name": "claude-engineer",
+  "owner": {
+    "name": "watanabe-e-kamakura"
+  },
+  "metadata": {
+    "description": "エンジニア向けClaude Codeプラグイン。autodev・レビュー・worktree・品質管理を汎用化"
+  },
+  "plugins": [
+    {
+      "name": "engineer",
+      "source": "./plugins/engineer",
+      "description": "エンジニア向け開発ワークフロー。設計→実装→テストの自動開発、第三者レビュー、worktree管理、品質チェック。",
+      "version": "0.2.0",
+      "author": {
+        "name": "watanabe-e-kamakura"
+      },
+      "repository": "https://github.com/watanabe-e-kamakura/claude-engineer",
+      "license": "MIT",
+      "category": "development",
+      "tags": ["autodev", "review", "worktree", "guardian", "development", "engineering"]
+    }
+  ]
+}

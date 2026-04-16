@@ -1,0 +1,40 @@
+# claude-engineer config.yml
+# セットアップ時に自動生成される。手動編集可。
+#
+# プレースホルダ: {{VARIABLE_NAME}} はセットアップ時に置換される
+
+# ワークスペースのルートパス（worktree の作成先）
+workspace_path: {{WORKSPACE_PATH}}
+
+# 技術スタック
+stack:
+  language: {{LANGUAGE}}           # php, typescript, python, go, rust
+  framework: {{FRAMEWORK}}         # laravel, nextjs, django, gin, actix
+  test_command: {{TEST_COMMAND}}   # php artisan test, npm test, pytest
+  lint_command: {{LINT_COMMAND}}   # vendor/bin/phpstan analyse, npm run lint
+
+# リポジトリ構成
+# type: common（共通）, project（事業部固有）, library（共有ライブラリ）
+# branch_prefix: ブランチ名の接頭辞。Issue番号が自動付与される
+# base_branch: PR・worktree のベースブランチ
+repositories:
+  - name: {{REPO_NAME}}
+    type: {{REPO_TYPE}}
+    branch_prefix: "feature/"
+    base_branch: develop
+    description: {{REPO_DESCRIPTION}}
+
+# --- 以下は任意設定 ---
+
+# PR テンプレート
+pr:
+  assignee: ""                     # GitHub ユーザー名
+  template: ""                     # .github/pull_request_template.md のパス
+
+# プロジェクト固有のスクリプト・ガイド（任意）
+# claude-engineer 本体は汎用。プロジェクト固有の処理はここで指定したスクリプトに委譲する
+adapters:
+  worktree_hook: ""                # worktree の post-create/up/down/pre-remove hook
+                                   # 例: .engineer/scripts/worktree-hook.sh
+  ui_test_guide: ""                # UI検証ガイド（autodev Phase 2.5 で参照）
+                                   # 例: .engineer/guides/playwright.md
