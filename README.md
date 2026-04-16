@@ -12,12 +12,22 @@
 ## インストール
 
 ```bash
-claude plugin add watanabe-e-kamakura/claude-engineer
+# 1. マーケットプレースとして登録
+claude plugin marketplace add watanabe-e-kamakura/claude-engineer
+
+# 2. プラグインをインストール
+claude plugin install engineer@claude-engineer
 ```
 
 ## セットアップ
 
-プロジェクトディレクトリで `/engineer` を実行すると、`.engineer/` フォルダが自動生成されます。
+```bash
+# 3. プロジェクトディレクトリに移動して Claude Code を起動
+cd ~/your-project
+claude
+```
+
+Claude Code 内で `/engineer` を実行すると、技術スタックとリポジトリ構成をヒアリングした後、`.engineer/` フォルダが自動生成されます。
 
 ```
 .engineer/
