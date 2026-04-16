@@ -176,20 +176,32 @@ trigger: /engineer
 
 ## チームメンバーの追加
 
-ユーザーが「〇〇の専門家をチームに入れたい」と言った場合、`team/` に新しいメンバー定義を作成する。
+### 同僚の分身を作る場合
 
-1. 役割・専門領域をヒアリング
-2. プリセットがあればそれを使う。なければ `references/team-lead.md` の構造を参考に作成
-3. `.engineer/team/<name>.md` を配置
-4. `.engineer/CLAUDE.md` のチームテーブルに追記
+Slack メッセージ、PR レビューコメント、メール、コードから分身を生成する。
+詳細な手順は `references/creating-team-members.md` を参照。
 
-**プリセット:**
+**データソースと取得ツール:**
+- **Slack**: Slack MCP（`slack_search_public_and_private`）で対象者の発言を検索。MCP がなければコピペで代替可
+- **GitHub PR コメント**: `gh` CLI で対象者のレビューコメントを取得（推奨）
+- **メール**: Gmail MCP で検索。MCP がなければコピペで代替可
+- **コード**: `gh` CLI で対象者のコミットを取得
 
-| メンバー | テンプレート | 追加条件 |
-|---------|------------|---------|
-| DBA | `references/team-dba.md` | マイグレーション・スキーマ変更 |
-| Security | `references/team-security.md` | 認証・認可・外部入力処理 |
-| Performance | `references/team-performance.md` | 大量データ・キャッシュ・N+1 |
+直近1年分のデータを食わせると精度が高い。プラグインは MCP を同梱しない。既にセットアップ済みなら活用する。
+
+### プリセット専門家を追加する場合
+
+| メンバー | テンプレート | activation 条件 |
+|---------|------------|----------------|
+| DBA | `references/team-dba.md` | migration ファイル・スキーマ変更キーワード |
+| Security | `references/team-security.md` | auth/middleware ファイル・認証キーワード |
+| Performance | `references/team-performance.md` | Jobs/Commands ファイル・バッチキーワード |
+
+### 共通手順
+
+1. 分身 or プリセットから `.engineer/team/<name>.md` を配置
+2. `.engineer/CLAUDE.md` のチームテーブルに追記
+3. 必要に応じて `## activation` セクションを調整（`always: true` or 条件指定）
 
 ユーザーが明示的に依頼した場合に追加する。autodev で該当分野の指摘が多い場合はリードエンジニアが追加を提案する。
 
@@ -226,6 +238,7 @@ trigger: /engineer
 - DBAテンプレート: `references/team-dba.md`
 - セキュリティテンプレート: `references/team-security.md`
 - パフォーマンステンプレート: `references/team-performance.md`
+- 分身の作り方ガイド: `references/creating-team-members.md`
 - デフォルトレビュー原則: `references/default-principles.md`
 - デフォルトアプローチパターン: `references/default-patterns.md`
 
