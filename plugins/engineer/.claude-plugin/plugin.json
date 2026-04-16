@@ -1,5 +1,5 @@
 {
   "name": "engineer",
   "description": "エンジニア向け開発ワークフロー。設計→実装→テストの自動開発、第三者レビュー、worktree管理、品質チェック。",
-  "version": "0.3.0"
+  "version": "0.4.0"
 }
